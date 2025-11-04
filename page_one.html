@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- to disable user zooming -->
+    <!-- use this:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+ 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="affordable solar panel installation in Malaysia">
+    <title>Advance Creative Technology - your solar solution</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            height: 100vh;
+        }
+
+        header {
+            font-size: min(20px, 10vw);
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            align-items: center;
+            padding: 0 10px;
+            flex-wrap: wrap;
+
+        }
+
+        .company-logo1 {
+            object-fit: cover;
+
+            /* logo won't get bigger than 55% of container */
+            max-width: 55%;
+            height: auto;
+        }
+
+        .section_one {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+
+        }
+
+        .canva_one {
+            flex: 7 1 0;
+            height: auto;
+            /* 100% inside the 70% allocated space provided by flex-basis of 7 */
+
+            min-width: 50%;
+            object-fit: cover;
+        }
+
+        .header_one {
+            display: flex;
+            flex-direction: column;
+            padding-left: 5%;
+            padding-right: 5%;
+            flex: 3 1 0;
+
+        }
+
+        .brand-name {
+            color: darkgreen;
+            font-weight: 600;
+        }
+
+        .div_one {
+            width: 100%;
+        }
+
+        header h3:nth-child(2) {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 8px;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            list-style-type: disc;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .section_two {
+            margin-top: 5%;
+            display: flex;
+
+            /* company name won't take up space above and beloww */
+            align-items: flex-start;
+            width: 100%;
+            flex-wrap: wrap;
+            min-height: 60%;
+        }
+
+
+        .product-gallery {
+            display: flex;
+
+            /* centers horizontally */
+            align-items: center;
+            /* centers vertically inside parent */
+            gap: 20px;
+            /* space between images */
+            flex-wrap: nowrap;
+            /* wrap nicely on small screens */
+            position: relative;
+            /* relative to canva-two-container */
+            height: 100%;
+            /* fill container height */
+            width: 100%;
+            background: url("canva_two.jpg") no-repeat center center/cover;
+
+
+        }
+
+        /* 
+        product-gallery is a parent flex container
+        <a> is child
+        <img> is descendent
+        using this method doesn't shrink of affect the background template size
+        */
+        .product-gallery a:nth-child(1) {
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+
+        .product-gallery a:nth-child(2) {
+            margin-left: 4%;
+            margin-top: 5%;
+        }
+
+        .product-gallery a:nth-child(3) {
+            margin-top: 5%;
+            margin-left: 4%;
+        }
+
+        .panel-img-one,
+        .panel-img-two,
+        .panel-img-three {
+            width: 88%;
+            height: auto;
+
+            /* prevents it from growing too large */
+            max-width: 280px;
+            /* prevents it from shrinking too small */
+            min-width: 150px;
+        }
+
+        .company-logo2 {
+            max-width: 9%;
+            height: auto;
+
+            transform: translateY(110%);
+            object-fit: conver;
+            border: 2px solid green;
+            z-index: 1;
+        }
+
+        .header-two {
+            display: flex;
+            flex-direction: column;
+            flex: 3 1 0;
+            padding-left: 5%;
+            padding-right: 5%;
+            width: 100%;
+
+        }
+
+
+
+        .canva-two-container {
+            flex: 7 1 0;
+
+            /* use vh, so it scales nicely with the screen */
+            min-height: 60vh;
+            aspect-ratio: 16 / 9;
+
+            width: 100%;
+            padding-right: 5%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: -5%;
+        }
+
+        .footer {
+            margin: 3% auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            font-size: min(20px, 10vw);
+            letter-spacing: 1px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+
+        }
+
+        /* ----- Tablets (max-width: 992) ------- */
+        @media (max-width: 992px) {
+            header {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .company-logo1 {
+                max-width: 70%;
+            }
+
+            .section_one,
+            .section_two {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header_one,
+            .header_two {
+                padding: 0 8%;
+            }
+
+            .canva_one,
+            .canva-two-container {
+                width: 90%;
+                min-width: unset;
+            }
+
+            .company-logo2 {
+                max-width: 12%;
+                top: 10px;
+
+            }
+        }
+
+        /* ------ Mobile (max-width: 600px) Portrait Mode --------- */
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.95rem;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+
+            }
+
+            .company-logo1 {
+                max-width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .company-logo2 {
+                max-width: 10%;
+            }
+
+            .header_one,
+            .header_two {
+                padding: 0 20px;
+            }
+
+            .section_one,
+            .section_two {
+                gap: 20px;
+            }
+
+            .canva_one,
+            .canva-two-container {
+                width: 100%;
+                max-width: 100%;
+
+            }
+
+            ul {
+                text-align: left;
+                font-size: 1rem;
+            }
+        }
+
+        /* Mobile Landscape (when phone turned sideways) */
+        @media (max-width: 900px) and (orientation: landscape) {
+            .section_one {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .canva_one {
+                flex: 5 1 0;
+                min-width: 45%;
+            }
+
+            .header_one {
+                flex: 5 1 0;
+                padding: 20px;
+            }
+
+            .section_two {
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .header-two {
+                padding: 5%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div_one">
+        <header>
+            <div>
+                <img src="logo_four.jpg" alt="company logo" class="company-logo1">
+            </div>
+            <div>Products</div>
+            <div>About Us</div>
+            <div>Contact Us</div>
+        </header>
+
+        <section class="section_one">
+            <img src="blue_template_one.svg" alt="slider image" class="canva_one">
+            <header class="header_one">
+                <h3>Malaysia’s Trusted Solar Panel Experts</h3>
+                <h4>Switching to solar has never been easier—or smarter. At
+                    <span class="brand-name">ADVANCE CREATIVE TECHNOLODY&reg;</span>
+                    we help Malaysians save money, reduce carbon emissions, and achieve true energy independence with
+                    high-quality solar panel systems designed for our tropical climate.
+                </h4>
+                <ul>
+                    <li>
+                        Lower Your Electricity Bills — Harness the sun to power your home or business and enjoy
+                        long-term savings.
+                    </li>
+                    <li>
+                        Trusted Local Installers — Our experienced team ensures professional installation, maintenance,
+                        and support.
+                    </li>
+                    <li>
+                        Sustainable & Smart Investment — Join thousands of Malaysians taking the step toward a cleaner,
+                        greener future.
+                    </li>
+                    <li>
+                        Government Incentives Available — Take advantage of Malaysia’s solar rebates and financing
+                        options today!
+                    </li>
+
+                </ul>
+            </header>
+        </section>
+
+        <section class="section_two">
+            <header class="header-two">
+                In remote areas of Sarawak, where conventional power lines are hard to reach,<span
+                    class="brand-name">Advance Creative
+                    Tehcnology&reg;</span> brings
+                electricity directly to your home or business using advanced solar panels. Our solar solutions provide
+                reliable, clean energy—so you can enjoy modern comforts without waiting for the grid.
+
+                From system design to installation and maintenance, we ensure your solar setup works efficiently
+                year-round. With solar power, you gain independence, save on costs, and help protect the environment at
+                the same time.
+            </header>
+
+            <div class="canva-two-container">
+                <img src="logo_four.jpg" alt="company logo" class="company-logo2">
+
+                <div class="product-gallery">
+
+                    <a href="screenshot.jpg" target="_blank">
+                        <img src="screenshot_thumb.jpg" alt="hybrid solar system" class="panel-img-one">
+                    </a>
+                    <a href="screenshot_two.jpg" target="_blank">
+                        <img src="screenshot_two_thumb.jpg" alt="solar panel plus battery station"
+                            class="panel-img-two">
+                    </a>
+                    <a href="screenshot_three.jpg" target="_blank">
+                        <img src="screenshot_three_thumb.jpg" alt="solar panel" class="panel-img-three">
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div>📞 +60 16-520 0601 | ✉ info@advancecreative.com | 🌐 Kuala Lumpur, Malaysia</div>
+    </footer>
+
+</body>
+
+</html>
